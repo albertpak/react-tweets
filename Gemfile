@@ -16,6 +16,9 @@ gem 'react-rails', '~> 1.6.0'
 
 group :development, :test do
   gem 'byebug'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'meta_request'
 end
 
 group :development do
