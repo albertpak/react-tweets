@@ -1,12 +1,10 @@
 import TweetBox from './components/TweetBox';
 import TweetsList from './components/TweetsList';
 
-let mockTweets = [];
-
 class Main extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { tweetsList: mockTweets};
+    this.state = { tweetsList: [] };
   }
 
   addTweet(tweetToAdd) {
@@ -20,7 +18,7 @@ class Main extends React.Component {
     return (
       <div className="container">
         <TweetBox sendTweet={this.addTweet.bind(this)} />
-        <TweetsList tweets={mockTweets=this.state.tweetsList} />
+        <TweetsList tweets={this.state.tweetsList} />
       </div>
     );
   }
